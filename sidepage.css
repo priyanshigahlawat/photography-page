@@ -1,0 +1,224 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+  top: 0;
+  width: 100%;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 30px;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+a:link, a:visited {
+  color:silver;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.area{
+  width: 1280px;
+  min-width: 500px;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    box-sizing: border-box;
+    filter: grayscale(0);
+  }
+
+.gallery:hover{
+  transform: scale(0.8);
+  filter:grayscale(100%)
+}  
+  
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 1686px;
+  height: 800px;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+.insta{
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.new{
+  display: block;
+}
+
+@media only screen and (max-width:765px){
+  .gallery{
+    width: 81px;
+    height: 98px;
+  }
+
+  .modal-content{
+    min-width: 382px;
+    height: 187px;
+
+  }
+
+  .area{
+    width: 100px;
+  }
+
+  li a{
+    padding: 20px 30px;
+  }
+
+  .insta{
+    display: none;
+  }
+
+  .numbertext{
+    display: none;
+  }
+
+  .gallery1{
+    width: 376px;
+    height: 291px;
+  }
+
+  .new{
+    display: none;
+  }
+
+  .mySlides{
+    display: none;
+  }
+
+  .modal{
+    width: 375px;
+  }
+}

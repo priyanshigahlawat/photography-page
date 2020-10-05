@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM</title>
+    <style>
+        body {
+            background-image: url(1/20191019_204438-01.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 30px;
+            font-family: 'Balsamiq Sans', cursive;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        a:link,
+        a:visited {
+            color: silver;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            text-decoration: underline;
+        }
+
+        .table {
+            height: 300px;
+        }
+
+        .abc {
+            margin: 100px 500px 100px 500px;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 50px;
+            padding-right: 80px;
+        }
+
+        input {
+            height: 33px;
+            width: 105%;
+        }
+
+        .buttons {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        .but {
+            padding: 7px 20px;
+            border: 2px solid white;
+            background: none;
+            border-radius: 8px;
+            color: silver;
+            margin: 7px 3px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .country {
+            height: 163%;
+            width: 105%;
+        }
+
+        .insta {
+            display: block;
+        }
+
+        @media only screen and (max-width:1416px) {
+            input {
+                height: 33px;
+                width: 200px;
+            }
+
+            .abc {
+                margin: 100px 500px 100px 245px;
+                padding-right: 70px;
+                padding-left: 30px;
+                height: 5000px;
+                width: 482px;
+            }
+
+            .insta {
+                display: none;
+            }
+
+            li a {
+                font-size: 70px;
+                padding: 40px 140px;
+            }
+
+            .table {
+                padding-right: 642px;
+                padding-top: 598px;
+            }
+
+            input {
+                height: 101px;
+                width: 496px;
+                border-radius: 19px;
+            }
+
+            .country {
+                height: 100px;
+                width: 1028px;
+                font-size: 82px;
+                border-radius: 19px;
+            }
+
+            .but {
+                font-size: 87px;
+                height: 135px;
+                width: 481px;
+            }
+
+            input {
+                font-size: 80px;
+            }
+            
+            ul{
+                padding-top: 51px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="project.html">Home</a></li>
+        <li><a href="sidepage.html">Gallery</a></li>
+        <li><a href="Form.html">Join Us</a></li>
+        <li style="float:right" class="insta"><a href="https://www.instagram.com/ps_clicks01/"><img src="1/inst.jpeg"
+                    width="30px" height="30px"></a></li>
+    </ul>
+    <div class="abc">
+        <form>
+            <table class="table">
+                <tr>
+                    <td><input type="text" placeholder="First Name*" id="fname"></td>
+                    <td><input type="text" placeholder="Last Name*" id="lname"></td>
+                </tr>
+                <tr>
+                    <th><input type="email" placeholder="Email*" id="email"></th>
+                    <th><input type="tel" placeholder="Phone*" id="phone"></th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <select class="country">
+                            <option value="select country">Select Country</option>
+                            <option value="America">America</option>
+                            <option value="China">China</option>
+                            <option value="India">India</optiion>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="text" class="inp" placeholder="City*" id="city"></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="text" class="inp" placeholder="Address"></th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <select class="country">
+                            <option value="select post">Desired Post</option>
+                            <option value="executive">Executive</option>
+                            <option value="CEO">CEO</option>
+                            <option value="member">Member</optiion>
+                        </select></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="text" placeholder="Additional info"></th>
+                </tr>
+            </table>
+            <br><br><br><br>
+            <div class="buttons">
+                <button class="but">Reset</button>
+
+                <button class="but" onclick="validation()">Submit</button>
+            </div>
+        </form>
+
+    </div>
+    <script type="text/javascript">
+
+        function validation() {
+            var i1 = document.getElementById('fname').value;
+            var i2 = document.getElementById('lname').value;
+            var i3 = document.getElementById('email').value;
+            var i4 = document.getElementById('phone').value;
+            var i5 = document.getElementById('city').value;
+
+            if (i1.length == 0 || i2.length == 0 || i3.length == 0 || i4.length == 0 || i5.length == 0) {
+                alert("required");
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="navbar h-nav-resp">
+        <ul class=" nav-list v-class-resp">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="sidepage.html">Gallery</a></li>
+            <li><a href="Form.html">Join Us</a></li>
+            <li style="float:right"><a href="https://www.instagram.com/ps_clicks01/"><img src="1/inst.jpeg" width="30px"
+                        height="30px"></a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+
+        </div>
+    </div>
+    <section class="background">
+        <div class="box-main">
+            <div class="box">
+                <p class="text-big">PHOTOGRAPHY</p>
+                <p class="text-small">The single most important component of a camera is the twelve
+                    inches behind it.</p>
+                <div class="button">
+                    <p id="demo" class="text-small" style="display:none">Photography is the art, application and
+                        practice of creating durable images by recording light or other electromagnetic radiation,
+                        either
+                        electronically by means of an image sensor, or chemically by means of a light-sensitive material
+                        such as photographic film.</p>
+                    <button class="btn" type="button" onclick="view()" id="viewbtn">
+                        View More</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">Copyright &copy; 2028 www.dark.com All rights reserved </footer>
+
+    <script>
+        function view() {
+            var i = document.getElementById('demo');
+            var j = document.getElementById('viewbtn');
+            var n = document.getElementById('demo').style.display;
+
+            if (n == "none") {
+                i.style.display = 'block';
+                j.innerHTML = "View Less";
+
+            }
+
+
+            else {
+                i.style.display = 'none';
+                j.innerHTML = "View More";
+
+            }
+
+
+        }
+
+        const burger = document.querySelector('.burger')
+        const navbar = document.querySelector('.navbar')
+        const navList = document.querySelector("ul")
+
+
+        burger.addEventListener('click', () => {
+            console.log('hello');
+
+            navList.classList.toggle('v-class-resp');
+            navbar.classList.toggle('h-nav-resp');
+        })
+
+    </script>
+</body>
+
+</html>
